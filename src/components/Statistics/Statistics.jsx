@@ -1,4 +1,5 @@
-import FeedbackCss from '../Feedback/Feedback.module.css';
+import PropTypes from 'prop-types';
+import FeedbackCss from '../FeedbackOptions/Feedback.module.css';
 
 export const FeedStatistics = ({ good, bad, neutral, total, percentage }) => {
   return (
@@ -29,4 +30,12 @@ export const FeedStatistics = ({ good, bad, neutral, total, percentage }) => {
       </ul>
     </div>
   );
+};
+
+FeedStatistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  percentage: PropTypes.string.isRequired,
 };
