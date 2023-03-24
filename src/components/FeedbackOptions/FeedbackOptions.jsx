@@ -5,14 +5,14 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className={FeedbackCss.feedback}>
       <div>
-        {options.map((name, ind) => {
+        {options.map(name => {
           return (
             <button
               className={FeedbackCss.btn}
               type="button"
               name={name}
               onClick={() => onLeaveFeedback(name)}
-              key={ind}
+              key={name}
             >
               {name}
             </button>
